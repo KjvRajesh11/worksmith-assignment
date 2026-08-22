@@ -4,6 +4,30 @@ Production-grade, modular, multi-agent support ticket triage system built with *
 
 ---
 
+## Quickstart
+
+Clone, set up, and run the triage pipeline against all 18 sample tickets in 30 seconds:
+
+```bash
+# 1. Clone repository
+git clone https://github.com/KjvRajesh11/worksmith-assignment.git
+cd worksmith-assignment
+
+# 2. Install dependencies
+pip install rich typer pydantic langgraph google-genai
+
+# 3. Optional: Export API Key (If omitted, built-in simulator processes all tickets)
+export GEMINI_API_KEY="your_gemini_api_key" # or OPENAI_API_KEY
+
+# 4. Run batch triage on all 18 sample tickets
+python3 run_triage.py
+
+# 5. Launch Human-in-the-Loop CLI queue manager
+python3 cli.py list
+```
+
+---
+
 ## 🏛️ Architecture & Orchestration Pattern
 
 ```
